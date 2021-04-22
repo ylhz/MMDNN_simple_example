@@ -1,6 +1,12 @@
 # MMDNN_simple_example
 
-tensorflow1.15  -> pytorch
+Language : CN | [EN](./README.en.md) 
+
+本文主要介绍了如何用<a herf='https://github.com/microsoft/MMdnn'>MMDNN</a>把Tensorflow模型转换为PyTorch模型
+
+原始框架: TensorFlow
+
+目标框架: PyTorch
 
 快速示例：（首先下载*inception_v3.ckpt*并放到models文件夹下面）
 
@@ -93,7 +99,7 @@ $python test.py  # test converted PyTorch model
    ```
 
    输出：*converted.json*，*converted.pb*，*converted.npy*
-   参数说明：
+   
 
    * IR文件转PyTorch
 
