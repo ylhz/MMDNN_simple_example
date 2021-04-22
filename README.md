@@ -2,7 +2,7 @@
 
 tensorflow1.15  -> pytorch
 
-快速示例：
+快速示例：（首先下载*inception_v3.ckpt*并放到models文件夹下面）
 
 ```sh
 $python tf_save_model.py --checkpoint_path ./models/inception_v3.ckpt --output_path output_model/inception_v3.ckpt # generate .meta and .data
