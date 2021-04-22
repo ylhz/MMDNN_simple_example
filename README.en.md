@@ -13,12 +13,12 @@ Quickly example：（You should download *inception_v3.ckpt* and pace it in mode
 You can refer to the official demo：<a herf='https://github.com/Microsoft/MMdnn/blob/master/docs/tf2pytorch.md'>https://github.com/Microsoft/MMdnn/blob/master/docs/tf2pytorch.md</a>
 
 ```sh
-$python tf_save_model.py --checkpoint_path ./models/inception_v3.ckpt --output_path output_model/inception_v3.ckpt # generate .meta and .data
-$cd output_model
-$mmvismeta inception_v3.ckpt.meta ./logs/  # generate tesorboard file
-$mmconvert -sf tensorflow -in inception_v3.ckpt.meta -iw inception_v3.ckpt --dstNode MMdnn_Output -df pytorch -om converted_pytorch.pth  # one-step converted
-$cd ..
-$python test.py  # test converted PyTorch model
+$ python tf_save_model.py --checkpoint_path ./models/inception_v3.ckpt --output_path output_model/inception_v3.ckpt # generate .meta and .data
+$ cd output_model
+$ mmvismeta inception_v3.ckpt.meta ./logs/  # generate tesorboard file
+$ mmconvert -sf tensorflow -in inception_v3.ckpt.meta -iw inception_v3.ckpt --dstNode MMdnn_Output -df pytorch -om converted_pytorch.pth  # one-step converted
+$ cd ..
+$ python test.py  # test converted PyTorch model
 # converted_pytorch.py and converted_pytorch.pth are the files we need 
 ```
 
@@ -29,9 +29,9 @@ $python test.py  # test converted PyTorch model
 ### 1.0 install
 
    ```bash
-   $pip install mmdnn
+   $ pip install mmdnn
    # or 
-   $pip install -U git+https://github.com/Microsoft/MMdnn.git@master
+   $ pip install -U git+https://github.com/Microsoft/MMdnn.git@master
    ```
 
    There are two ways to get the following required documents.
@@ -51,7 +51,7 @@ $python test.py  # test converted PyTorch model
 ### 1.1 Download model by *mmdownload*
 
    ```bash
-   $mmdownload -f tensorflow -n inception_v3
+   $ mmdownload -f tensorflow -n inception_v3
    ```
 ### 1.2 model.py + model weight file
 
