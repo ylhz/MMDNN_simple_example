@@ -150,3 +150,5 @@ $python test.py  # test converted PyTorch model
 * 转换后的PyTorch和Tensorflow代码准确率不同
 
   可能是测试时没有设置model.eval()，或者是数据预处理方式不一致，比如没有把输入转化为[-1, 1]之间。（tensorflow一般是把输入转化为[-1, 1]之间）
+  
+  你也可以参考官方DEMO：<a herf='https://github.com/Microsoft/MMdnn/blob/master/docs/tf2pytorch.md'>https://github.com/Microsoft/MMdnn/blob/master/docs/tf2pytorch.md</a>
