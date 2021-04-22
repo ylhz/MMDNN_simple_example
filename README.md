@@ -137,7 +137,7 @@ $python test.py  # test converted PyTorch model
    inc_v3 = KitModel('./converted_pytorch.npy')
    ```
    
-   (具体例子查看**<a herf='./test.py'>test.py</a>**)
+   (例子查看[**test.py**](./test.py))
 
 ## 遇到过的BUG:
 
