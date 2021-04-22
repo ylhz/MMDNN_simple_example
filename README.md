@@ -4,6 +4,8 @@ tensorflow1.15  -> pytorch
 
 快速示例：（首先下载*inception_v3.ckpt*并放到models文件夹下面）
 
+也可以参考官方DEMO：<a herf='https://github.com/Microsoft/MMdnn/blob/master/docs/tf2pytorch.md'>https://github.com/Microsoft/MMdnn/blob/master/docs/tf2pytorch.md</a>
+
 ```sh
 $python tf_save_model.py --checkpoint_path ./models/inception_v3.ckpt --output_path output_model/inception_v3.ckpt # generate .meta and .data
 $cd output_model
@@ -151,4 +153,4 @@ $python test.py  # test converted PyTorch model
 
   可能是测试时没有设置model.eval()，或者是数据预处理方式不一致，比如没有把输入转化为[-1, 1]之间。（tensorflow一般是把输入转化为[-1, 1]之间）
   
-  你也可以参考官方DEMO：<a herf='https://github.com/Microsoft/MMdnn/blob/master/docs/tf2pytorch.md'>https://github.com/Microsoft/MMdnn/blob/master/docs/tf2pytorch.md</a>
+  
