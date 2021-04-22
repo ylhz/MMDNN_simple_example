@@ -24,9 +24,9 @@ $python test.py  # test converted PyTorch model
 
 
 
-1. ######  前提准备
+## 1. 前提准备
 
-   1.0 安装
+### 1.0 安装
 
    ```bash
    $pip install mmdnn
@@ -48,12 +48,12 @@ $python test.py  # test converted PyTorch model
 
    注：inception_v3.ckpt和inception_v3.ckpt.data-00000-of-00001都用inception_v3.ckpt来读取
 
-   1.1 使用官方权重，下载后会直接生成相应文件
+### 1.1 使用官方权重，下载后会直接生成相应文件
 
    ```bash
    $mmdownload -f tensorflow -n inception_v3
    ```
-   1.2 使用网络结构代码 + 权重文件生成
+### 1.2 使用网络结构代码 + 权重文件生成
 
    ```python
    flow = tf.identity(logits_v3, name="MMdnn_Output")  
@@ -67,9 +67,9 @@ $python test.py  # test converted PyTorch model
 
    ![image-20210422090831223](https://github.com/ylhz/MMDNN_simple_example/blob/main/readme_img/image-20210422090831223.png)
 
-2. ###### 转换
+## 2.转换
 
-   2.1 一步方法
+### 2.1 一步方法
 
    ```bash
    $ mmconvert -sf tensorflow -in inception_v3.ckpt.meta -iw inception_v3.ckpt --dstNode MMdnn_Output -df pytorch -om tf_to_pytorch_inception_v3.pth
@@ -90,7 +90,7 @@ $python test.py  # test converted PyTorch model
 
    
 
-   2.2 多步方法
+### 2.2 多步方法
 
    * TF模型转IR
 
@@ -119,9 +119,9 @@ $python test.py  # test converted PyTorch model
 
      输出：*converted_pytorch.pth*
 
-3. ###### 使用
+## 3.使用
 
-   3.1 使用.pth文件
+### 3.1 使用.pth文件
 
    需要用到**imp**库
 
@@ -131,7 +131,7 @@ $python test.py  # test converted PyTorch model
    inc_v3 = inc_v3.cuda().eval()
    ```
 
-   3.2 使用.npy文件
+### 3.2 使用.npy文件
 
    ```python
    inc_v3 = KitModel('./converted_pytorch.npy')
@@ -139,7 +139,7 @@ $python test.py  # test converted PyTorch model
    
    (具体例子查看**test.py**)
 
-遇到过的BUG:
+## 遇到过的BUG:
 
 * **MMdnn_Output is not in graph:**
 
