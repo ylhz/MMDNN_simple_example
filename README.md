@@ -126,7 +126,7 @@ $python test.py  # test converted PyTorch model
    3.2 使用.npy文件
 
    ```python
-inc_v3 = KitModel('./converted_pytorch.npy')
+      inc_v3 = KitModel('./converted_pytorch.npy')
    ```
    
    (具体例子查看**test.py**)
