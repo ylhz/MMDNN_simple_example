@@ -24,7 +24,7 @@ $python test.py  # test converted PyTorch model
 
 
 
-1. ######  Start
+1. ##  Start
 
    1.0 install
 
@@ -67,7 +67,7 @@ $python test.py  # test converted PyTorch model
 
    ![image-20210422090831223](readme_img/image-20210422090831223.png)
 
-2. ######  conversion 
+2. ##  conversion 
 
 3. 2.1 One-step Commend
 
@@ -119,7 +119,7 @@ $python test.py  # test converted PyTorch model
 
      Outputs: *converted_pytorch.pth*
 
-4. ###### Test Model
+4. ## Test Model
 
    3.1 .pth
 
@@ -139,7 +139,7 @@ $python test.py  # test converted PyTorch model
 
    (see detail in <a herf='./test.py'> **test.py**</a>)
 
-You may meet some BUG:
+## You may meet some BUG:
 
 * **MMdnn_Output is not in graph:**
 
