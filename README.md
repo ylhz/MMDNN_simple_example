@@ -32,7 +32,7 @@ $python test.py  # test converted PyTorch model
 
    --model.ckpt.data（权重数据）
 
-   ![image-20210421220158771](.\readme_img\image-20210421220158771.png)
+   ![image-20210421220158771](https://github.com/ylhz/MMDNN_simple_example/blob/main/readme_img/image-20210421220158771.png)
 
    如果有图中第一个和第三个文件，可以直接进入转换过程
 
