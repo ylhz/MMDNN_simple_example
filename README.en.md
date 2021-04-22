@@ -24,9 +24,9 @@ $python test.py  # test converted PyTorch model
 
 
 
-1. ##  Start
+## 1. Start
 
-   1.0 install
+### 1.0 install
 
    ```bash
    $pip install mmdnn
@@ -48,12 +48,12 @@ $python test.py  # test converted PyTorch model
 
    
 
-   1.1 Download model by *mmdownload*
+### 1.1 Download model by *mmdownload*
 
    ```bash
    $mmdownload -f tensorflow -n inception_v3
    ```
-   1.2 model.py + model weight file
+### 1.2 model.py + model weight file
 
    ```python
    flow = tf.identity(logits_v3, name="MMdnn_Output")  
@@ -67,9 +67,9 @@ $python test.py  # test converted PyTorch model
 
    ![image-20210422090831223](readme_img/image-20210422090831223.png)
 
-2. ##  conversion 
+## 2. conversion 
 
-3. 2.1 One-step Commend
+### 2.1 One-step Commend
 
    ```bash
    $ mmconvert -sf tensorflow -in inception_v3.ckpt.meta -iw inception_v3.ckpt --dstNode MMdnn_Output -df pytorch -om tf_to_pytorch_inception_v3.pth
@@ -90,7 +90,7 @@ $python test.py  # test converted PyTorch model
 
    
 
-   2.2 Step-by-step Command
+### 2.2 Step-by-step Command
 
    * TF to IR
 
@@ -119,9 +119,9 @@ $python test.py  # test converted PyTorch model
 
      Outputs: *converted_pytorch.pth*
 
-4. ## Test Model
+## 3. Test Model
 
-   3.1 .pth
+### 3.1 .pth
 
    You need to use ```import imp```
 
@@ -131,7 +131,7 @@ $python test.py  # test converted PyTorch model
    inc_v3 = inc_v3.cuda().eval()
    ```
 
-   3.2 .npy
+### 3.2 .npy
 
    ```python
    inc_v3 = KitModel('./converted_pytorch.npy')
