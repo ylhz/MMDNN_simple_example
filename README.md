@@ -59,7 +59,7 @@ $ python test.py  # test converted PyTorch model
    flow = tf.identity(logits_v3, name="MMdnn_Output")  
    ```
 
-   需要定义最后输出层的名称，这里设置为了mmdnn官方默认的名字*'MMdnn_Output'*
+   需要定义最后输出层的名称，这里设置为了mmdnn官方默认的名字*MMdnn_Output*
 
    然后使用```saver.save(sess, model_path)```保存权重。
 
