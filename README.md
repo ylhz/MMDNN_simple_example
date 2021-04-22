@@ -57,7 +57,7 @@ $python test.py  # test converted PyTorch model
 
    保存文件如下：
 
-   ![image-20210422090831223](.\readme_img\image-20210422090831223.png)
+   ![image-20210422090831223](https://github.com/ylhz/MMDNN_simple_example/blob/main/readme_img/image-20210422090831223.png)
 
 2. ###### 转换
 
@@ -144,7 +144,7 @@ inc_v3 = KitModel('./converted_pytorch.npy')
   $tensorboard --logdir=logs --port=6006 # open tensorboard
   ```
 
-![image-20210422091652201](.\readme_img\image-20210422091652201.png)
+![image-20210422091652201](https://github.com/ylhz/MMDNN_simple_example/blob/main/readme_img/image-20210422091652201.png)
 
 
 * 转换后的PyTorch和Tensorflow代码准确率不同
