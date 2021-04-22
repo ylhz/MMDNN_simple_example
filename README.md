@@ -116,8 +116,8 @@ $python test.py  # test converted PyTorch model
    ```bash
    $mmtomodel -f pytorch -in converted_pytorch.py -iw converted_pytorch.npy -o converted_pytorch.pth
    ```
-
-     输出：*converted_pytorch.pth*
+   
+   输出：*converted_pytorch.pth*
 
 ## 3.使用
 
@@ -137,7 +137,7 @@ $python test.py  # test converted PyTorch model
    inc_v3 = KitModel('./converted_pytorch.npy')
    ```
    
-   (具体例子查看**test.py**)
+   (具体例子查看**<a herf='./test.py'>test.py</a>**)
 
 ## 遇到过的BUG:
 
