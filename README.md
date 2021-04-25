@@ -95,7 +95,7 @@ $ python test.py  # test converted PyTorch model
    * TF模型转IR
 
    ```bash
-   $ mmtoir -f tensorflow -n inception_v3.ckpt.meta -w inception_v3.ckpt --dstNode outputs -o converted
+   $ mmtoir -f tensorflow -n inception_v3.ckpt.meta -w inception_v3.ckpt --dstNode MMdnn_Output -o converted
    ```
 
    输出：*converted.json*，*converted.pb*，*converted.npy*
