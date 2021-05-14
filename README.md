@@ -158,4 +158,26 @@ $ python test.py  # test converted PyTorch model
 
   可能是测试时没有设置model.eval()，或者是数据预处理方式不一致，比如没有把输入转化为[-1, 1]之间。（tensorflow一般是把输入转化为[-1, 1]之间）
   
+* **RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cuda:0 and cpu!**
+   
+   该错误一般是由于MMDNN把模型中的变量转化为torch后，没有把其放入模型参数中，因此无法直接用model.cuda()把变量放入GPU。
+   
+   转化前代码：
+   
+   ![image](https://user-images.githubusercontent.com/40712151/118211339-999d7e00-b49e-11eb-8fa8-5678d43b9de6.png)
+
+   转化后代码：
+   
+   ![image](https://user-images.githubusercontent.com/40712151/118211095-298ef800-b49e-11eb-81c5-0362662701d5.png)
+   
+   解决方法：
+   
+   将变量放入到模型参数中：
+   
+   ```python
+   from torch.nn.parameter import Parameter
+        self.InceptionResnetV2_InceptionResnetV2_Repeat_block35_1_mul_x = Parameter(torch.autograd.Variable(torch.Tensor([0.17000000178813934]), requires_grad=False))
+   ```
+   
+   上面代码要放入```def __init__(self, weight_file):```
   
