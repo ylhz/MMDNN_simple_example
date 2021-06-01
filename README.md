@@ -13,12 +13,12 @@ Language : CN | [EN](./README.en.md)
 也可以参考官方DEMO：<a herf='https://github.com/Microsoft/MMdnn/blob/master/docs/tf2pytorch.md'>https://github.com/Microsoft/MMdnn/blob/master/docs/tf2pytorch.md</a>
 
 ```sh
-$ python tf_save_model.py --checkpoint_path ./models/inception_v3.ckpt --output_path output_model/inception_v3.ckpt # generate .meta and .data
-$ cd output_model
-$ mmvismeta inception_v3.ckpt.meta ./logs/  # generate tesorboard file
-$ mmconvert -sf tensorflow -in inception_v3.ckpt.meta -iw inception_v3.ckpt --dstNode MMdnn_Output -df pytorch -om converted_pytorch.pth  # one-step converted
-$ cd ..
-$ python test.py  # test converted PyTorch model
+python tf_save_model.py --checkpoint_path ./models/inception_v3.ckpt --output_path output_model/inception_v3.ckpt # generate .meta and .data
+cd output_model
+mmvismeta inception_v3.ckpt.meta ./logs/  # generate tesorboard file
+mmconvert -sf tensorflow -in inception_v3.ckpt.meta -iw inception_v3.ckpt --dstNode MMdnn_Output -df pytorch -om converted_pytorch.pth  # one-step converted
+cd ..
+python test.py  # test converted PyTorch model
 # converted_pytorch.py and converted_pytorch.pth are the files we need 
 ```
 
@@ -29,9 +29,9 @@ $ python test.py  # test converted PyTorch model
 ### 1.0 安装
 
    ```bash
-   $ pip install mmdnn
+   pip install mmdnn
    # or 
-   $ pip install -U git+https://github.com/Microsoft/MMdnn.git@master
+   pip install -U git+https://github.com/Microsoft/MMdnn.git@master
    ```
 
    转换需要用到下列文件，有两种方式获取，一是直接用官方命令下载，二是自己生成。
@@ -51,7 +51,7 @@ $ python test.py  # test converted PyTorch model
 ### 1.1 使用官方权重，下载后会直接生成相应文件
 
    ```bash
-   $ mmdownload -f tensorflow -n inception_v3
+   mmdownload -f tensorflow -n inception_v3
    ```
 ### 1.2 使用网络结构代码 + 权重文件生成
 
@@ -72,7 +72,7 @@ $ python test.py  # test converted PyTorch model
 ### 2.1 一步方法
 
    ```bash
-   $ mmconvert -sf tensorflow -in inception_v3.ckpt.meta -iw inception_v3.ckpt --dstNode MMdnn_Output -df pytorch -om tf_to_pytorch_inception_v3.pth
+   mmconvert -sf tensorflow -in inception_v3.ckpt.meta -iw inception_v3.ckpt --dstNode MMdnn_Output -df pytorch -om tf_to_pytorch_inception_v3.pth
    ```
 
    输出：tf_to_pytorch_inception_v3.pth
@@ -95,7 +95,7 @@ $ python test.py  # test converted PyTorch model
    * TF模型转IR
 
    ```bash
-   $ mmtoir -f tensorflow -n inception_v3.ckpt.meta -w inception_v3.ckpt --dstNode MMdnn_Output -o converted
+   mmtoir -f tensorflow -n inception_v3.ckpt.meta -w inception_v3.ckpt --dstNode MMdnn_Output -o converted
    ```
 
    输出：*converted.json*，*converted.pb*，*converted.npy*
@@ -104,7 +104,7 @@ $ python test.py  # test converted PyTorch model
    * IR文件转PyTorch
 
    ```bash
-   $ mmtocode -f pytorch -n converted.pb -w converted.npy -d converted_pytorch.py -dw converted_pytorch.npy
+   mmtocode -f pytorch -n converted.pb -w converted.npy -d converted_pytorch.py -dw converted_pytorch.npy
    ```
 
    输出：*converted_pytorch.py*（转换后的pytorch版的网络结构代码），*converted_pytorch.npy*（转换后的网络权重）
@@ -114,7 +114,7 @@ $ python test.py  # test converted PyTorch model
    * 导出最终模型
 
    ```bash
-   $ mmtomodel -f pytorch -in converted_pytorch.py -iw converted_pytorch.npy -o converted_pytorch.pth
+   mmtomodel -f pytorch -in converted_pytorch.py -iw converted_pytorch.npy -o converted_pytorch.pth
    ```
    
    输出：*converted_pytorch.pth*
@@ -148,7 +148,7 @@ $ python test.py  # test converted PyTorch model
   也可通过以下命令查看：
 
   ```bash
-  $ mmvismeta inception_v3.ckpt.meta ./logs/  # generate tesorboard file 
+  mmvismeta inception_v3.ckpt.meta ./logs/  # generate tesorboard file 
   ```
 
 ![image-20210422091652201](./readme_img/image-20210422091652201.png)
