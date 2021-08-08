@@ -10,6 +10,8 @@ Destination: PyTorch
 
 Quickly example：（You should download *inception_v3.ckpt* and pace it in models/）
 
+**If you just want to get the converted model, please go to [tf_to_pytorch_model](https://github.com/ylhz/tf_to_pytorch_model)**
+
 You can refer to the official demo：<a herf='https://github.com/Microsoft/MMdnn/blob/master/docs/tf2pytorch.md'>https://github.com/Microsoft/MMdnn/blob/master/docs/tf2pytorch.md</a>
 
 ```sh
