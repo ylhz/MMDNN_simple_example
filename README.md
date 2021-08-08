@@ -10,6 +10,8 @@ Language : CN | [EN](./README.en.md)
 
 快速示例：（首先下载*inception_v3.ckpt*并放到models文件夹下面）
 
+**如果你只想要转换后的模型，请转到[tf_to_pytorch_model](https://github.com/ylhz/tf_to_pytorch_model)**
+
 也可以参考官方DEMO：<a herf='https://github.com/Microsoft/MMdnn/blob/master/docs/tf2pytorch.md'>https://github.com/Microsoft/MMdnn/blob/master/docs/tf2pytorch.md</a>
 
 ```sh
